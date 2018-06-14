@@ -1,6 +1,6 @@
 {
   "name": "tropy-aeon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tropy to Aeon Timeline Export Plugin",
   "main": "index.js",
   "scripts": {
