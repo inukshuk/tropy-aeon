@@ -6,7 +6,7 @@ const { join } = require('path')
 
 class AeonPlugin {
   constructor(options, context) {
-    this.options = { ...AeonPlugin.defaults, ...options }
+    this.options = Object.assign({}, AeonPlugin.defaults, options)
     this.context = context
   }
 
