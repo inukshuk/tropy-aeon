@@ -39,6 +39,7 @@ class AeonPlugin {
           ws.write(`${[
             this.encode(item.title),
             this.encode(item.date),
+            this.encode(item.creator || item.author),
             this.encode(item.photo.map(p => p.path).join('|'))
           ].join(',')}\n`)
 
@@ -64,8 +65,8 @@ class AeonPlugin {
 
   get header() {
     return this.options.quotes ?
-      '"Title","Start","Links"' :
-      'Title,Start,Links'
+      '"Title","Start","Author","Links"' :
+      'Title,Start,Author,Links'
   }
 
   get logger() {
